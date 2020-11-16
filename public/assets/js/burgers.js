@@ -13,6 +13,28 @@ $(function(){
             location.reload();
         });
     });    
+
+    $(".btn").on("click",function(event){
+        let id = $(this).data("id");
+        let newDevoured = $(this).data("newdevoured");
+        console.log(newDevoured);
+
+        let newBurgerDevoured = {
+            devoured: newDevoured
+
+        };
+        console.log(newBurgerDevoured);
+        $.ajax("/api/burgers/"+id,{
+            type: "PUT",
+            data: newBurgerDevoured
+        }).then(function(){
+            console.log("Burger has been devoured");
+            location.reload();
+        });
+
+
+        
+    });
 });
 
 // <form class="create-form">

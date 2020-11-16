@@ -1,0 +1,20 @@
+<li class="list-group-item">
+    <div class="row">
+        <div class="col md-6">
+            {{burger_name}}
+        </div>
+        {{#if devoured}}
+            <div class="col md-12">
+                <button class="btn btn-primary btn-sm" data-id="{{id}}" data-newdevoured="{{devoured}}">
+                        DEVOURE IT!
+                </button>
+            </div>
+        {{else}}
+            <div class="col md-12">
+                <span class="btn-primary btn-sm" data-id="{{id}}" data-newdevoured="{{devoured}}">
+                        YUMMY!
+                </span>
+            </div>
+        {{/if}}    
+    </div>	
+</li>
