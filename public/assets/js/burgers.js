@@ -1,10 +1,12 @@
 $(function(){
+    // Onclick event when creating a new burger
     $(".create-form").on("submit", function(event){
         event.preventDefault();
         var newBurger = {
             burger_name: $("#bu").val().trim(),
             devoured : 0
         };
+        // POST Call to create a new burger API
         $.ajax("/api/burgers",{
             type: "POST",
             data: newBurger
@@ -14,6 +16,7 @@ $(function(){
         });
     });    
 
+    // Onclick event when devouring burger
     $(".btn").on("click",function(event){
         let id = $(this).data("id");
         let newDevoured = $(this).data("newdevoured");
@@ -24,6 +27,8 @@ $(function(){
 
         };
         console.log(newBurgerDevoured);
+
+        // PUT call to API to update status of the burger
         $.ajax("/api/burgers/"+id,{
             type: "PUT",
             data: newBurgerDevoured
@@ -31,18 +36,8 @@ $(function(){
             console.log("Burger has been devoured");
             location.reload();
         });
-
-
         
     });
 });
 
-// <form class="create-form">
-
-// <div class="form-group">
-//   <label for="bu">Burger Name:</label>
-//   <input type="text" id="bu" name="burger_name">
-// </div>
-// <button type="submit">Add Burger</button>
-// </form>
 
