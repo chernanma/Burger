@@ -17,7 +17,8 @@ $(function(){
     });    
 
     // Onclick event when devouring burger
-    $(".btn").on("click",function(event){
+    $(".devour").on("click",function(event){
+        event.preventDefault();
         let id = $(this).data("id");
         let newDevoured = $(this).data("newdevoured");
         console.log(newDevoured);
