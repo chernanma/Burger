@@ -5,7 +5,7 @@ This Eat-Da-Burger app has been developed following the MVC design pattern, impl
 
 ![picture](./public/assets/images/main.jpg)
 
-[Click to go to live Site](https://github.com/chernanma/Burger)
+[Click to go to live Site](https://secret-bastion-89828.herokuapp.com/)
 
 [Click here to go to Repository](https://github.com/chernanma/Burger)
 
